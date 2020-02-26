@@ -1,2 +1,44 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<h4>Shopping List<h4>
+<h5><%= link_to "New food Item", new_food_path %></h5>
+
+<table class="form-squish">
+  <thead>
+    <tr>
+      <th>purchased?</th>
+      <th>Name</th>
+      <th>Calories</th>
+      <th>Weight(g)</th>
+      <th>Ingredients</th>
+      <th>delete/edit</th>
+    </tr>
+  </thead>
+    <% @foods.each do |food| %>
+  <tbody>
+    <tr>
+      <td></td>
+      <td><%= "#{food.name}"%></td>
+      <td><%="#{food.calories} C" %></td>
+      <td><%="#{food.weight}g" %></td>
+      <td><%="#{food.ingredient}" %></td>
+      <td><%= link_to "delete", food_path(food), method: :delete%>/
+      <%= link_to 'edit', edit_food_path(food)%></td>
+    </tr>
+  <% end%>
+  <tr>
+    <td></td>
+    <td></td>
+    <td class='thick'>Total Calories</td>
+    <td class='thick'>Total Weight</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td class='thick'><%= "#{@calories} C" %></td>
+    <td class='thick'><%= "#{@weight}g" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>

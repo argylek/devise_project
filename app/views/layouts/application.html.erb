@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>DeviseProject</title>
     <%= csrf_meta_tags %>
@@ -12,6 +13,8 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= render "layouts/navbar" %>
     <%= yield %>
   </body>
+
 </html>

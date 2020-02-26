@@ -14,4 +14,19 @@
  *= require_self
  */
  @import 'materialize';
- @import 'flash';
+//  @import 'flash';
+
+ .form-squish {
+   width: 50%;
+   margin: auto;
+ }
+ .thick {
+   font-weight: bold;
+   .right {
+     justify-content: right;
+   }
+ }
+
+ body {
+   margin: 1em;
+ }

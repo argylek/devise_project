@@ -1,0 +1,21 @@
+<%= form_with(model:@food, local: true, placeholder:'Delicious Thing') do |f| %>
+<div class= 'form-squish'>
+<div class='field'>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, focus: true, placeholder: 'name of the food'%>
+  </div>
+  <div class='field'>
+  <%= f.label :calories %>
+  <%= f.number_field :calories %>
+  </div>
+  <div class='field'>
+  <%= f.label :weight%>
+  <%= f.number_field :weight, placeholder:'in grams' %>
+  </div>
+  <div class='field'>
+  <%= f.label :ingredient%>
+  <%= f.text_field :ingredient, placeholder:'add ingredients for more complex foods'%>
+  </div>
+  <%= f.submit %>
+  <% end %>
+  </div>
